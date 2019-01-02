@@ -1,0 +1,23 @@
+<h2>New Event</h2>
+
+<%= form_for @event do |f| %>
+
+<%=f.label :name %>
+<%= f.text_field :name %>
+
+<%=f.label :address %>
+<%= f.text_field :address %>
+<br>
+<br>
+Interest: <%=f.collection_select :interest_id, Interest.all, :id, :name%>
+<br>
+<br>
+<div class="field">
+<%=f.label :datetime %>
+<%= f.datetime_select :datetime %>
+</div>
+<br>
+
+
+<%= f.submit "Sign Up" %>
+<% end %>

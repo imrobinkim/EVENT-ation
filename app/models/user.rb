@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_many :events, foreign_key: 'host_id'
   has_many :interests, through: :events
   has_many :guests, class_name: 'EventsGuest', foreign_key: 'guest_id'
+  has_secure_password
 end

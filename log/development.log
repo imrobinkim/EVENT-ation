@@ -1636,3 +1636,830 @@ Migrating to CreateEventsGuests (20190102162207)
   [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" INNER JOIN "events" ON "interests"."id" = "events"."interest_id" WHERE "events"."host_id" = ? LIMIT ?[0m  [["host_id", 1], ["LIMIT", 11]]
   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = ? LIMIT ?[0m  [["host_id", 2], ["LIMIT", 11]]
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."host_id" = ? LIMIT ?[0m  [["host_id", 1], ["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-01-02 15:33:30 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (11.8ms)
+Completed 200 OK in 73ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-02 15:33:50 -0500
+  
+ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/user" for 127.0.0.1 at 2019-01-02 15:33:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user/new" for 127.0.0.1 at 2019-01-02 15:34:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:34:27 -0500
+  
+ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:35:32 -0500
+  
+ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:36:33 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 1412ms (Views: 1377.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:41:00 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>New Event</h2>
+    2: 
+    3: <%= form_for @event do |f| %>
+    4: 
+    5: <%=f.label :name %>
+    6: <%= f.text_field :name %>
+  
+app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171332293520'
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:41:21 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>New Event</h2>
+    2: 
+    3: <% form_for @event do |f| %>
+    4: 
+    5: <%=f.label :name %>
+    6: <%= f.text_field :name %>
+  
+app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171373002700'
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:41:55 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<Event:0x007fa412d7b000>):
+    12: <%= f.text_field :name %>
+    13: 
+    14: <%=f.label :email %>
+    15: <%= f.text_field :email %>
+    16: 
+    17: <%=f.label :age %>
+    18: <%= f.text_field :age %>
+  
+app/views/events/new.html.erb:15:in `block in _app_views_events_new_html_erb___4221183299359651397_70171366851120'
+app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171366851120'
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:43:09 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 62ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:44:19 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:44:33 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:44:41 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 47ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:44:53 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:45:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:46:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mInterest Load (2.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:11
+  Rendered events/new.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 83ms (Views: 77.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:46:42 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:12
+  Rendered events/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:46:50 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:12
+  Rendered events/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:47:44 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mInterest Load (0.3ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:12
+  Rendered events/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:12:14 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<SessionsController:0x007fc74fce3240>):
+  
+app/controllers/sessions_controller.rb:3:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:14:57 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (344.4ms)
+Completed 500 Internal Server Error in 422ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc74fd40b48>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247007282780'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247007282780'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:17:00 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (292.1ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“password”' for #<#<Class:0x007fc74fd54940>:0x007fc750995420>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247013681080'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247013681080'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:17:12 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247014034220'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247014034220'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:17:21 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (246.6ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc753069808>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247009891680'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247009891680'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:17:54 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (261.7ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc74ffa6f40>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247008511800'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247008511800'
+app/controllers/sessions_controller.rb:6:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUser (20190102211922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190102211922_add_password_digest_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102211922"]]
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:19:40 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (243.3ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74f55b590>:0x007fc74f551c20>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247003084200'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247003084200'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:23:57 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (296.3ms)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc7531899e0>:0x007fc753183540>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247034651700'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247034651700'
+app/controllers/sessions_controller.rb:6:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20181230174336)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "name" varchar, "email" varchar, "password" varchar, "points" integer, "age" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174336_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174336"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateEvents (20181230174428)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "datetime" datetime, "points" integer, "host_id" integer, "interest_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174428_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174428"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateInterests (20181230174540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "interests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174540_create_interests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174540"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateEventsGuests (20190102162207)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "events_guests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "guest_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190102162207_create_events_guests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102162207"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddPasswordDigestToUser (20190102211922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190102211922_add_password_digest_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102211922"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-02 21:31:21.029742"], ["updated_at", "2019-01-02 21:31:21.029742"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:31:40 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (391.6ms)
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fcf870b2440>:0x007fcf832c3850>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___3987940293912880275_70264617858520'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3987940293912880275_70264617858520'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:33:49 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (245.4ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fcf870b2440>:0x007fcf81bbe448>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___3987940293912880275_70264605726040'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3987940293912880275_70264605726040'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:36:40 -0500
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 8218ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:37:04 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (347.8ms)
+Completed 500 Internal Server Error in 412ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fbdb7980d10>:0x007fbdb332a118>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2734106923498672601_70226410760740'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2734106923498672601_70226410760740'
+app/controllers/sessions_controller.rb:6:in `new'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:16
+  [1m[36mInterest Load (0.3ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ db/seeds.rb:17
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "points", "age", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "rkim"], ["name", "Robin Kim"], ["email", "rkim@gmail.com"], ["points", 0], ["age", 24], ["created_at", "2019-01-02 21:39:09.226565"], ["updated_at", "2019-01-02 21:39:09.226565"], ["password_digest", "$2a$10$nf09M.ZUlWY2agX.cwVFSeuKU9X/Z6RhSWaD7sNVeWhxcX3C3wbXi"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "points", "age", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jbenjamin"], ["name", "Jonnel Benjamin"], ["email", "jbenj@gmail.com"], ["points", 0], ["age", 23], ["created_at", "2019-01-02 21:39:09.314522"], ["updated_at", "2019-01-02 21:39:09.314522"], ["password_digest", "$2a$10$mor/XUmhZwUO3OO0B2r2yO6YQ/iOCW6th6.chWyY4aAfbO0Xudt2W"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mInterest Create (0.7ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Reading"], ["created_at", "2019-01-02 21:39:09.325155"], ["updated_at", "2019-01-02 21:39:09.325155"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mInterest Create (0.5ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Baking"], ["created_at", "2019-01-02 21:39:09.331096"], ["updated_at", "2019-01-02 21:39:09.331096"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "address", "datetime", "points", "host_id", "interest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bake Off"], ["address", "234 Good Ave"], ["datetime", "2019-01-02 21:39:09.338851"], ["points", 5], ["host_id", 1], ["interest_id", 2], ["created_at", "2019-01-02 21:39:09.379604"], ["updated_at", "2019-01-02 21:39:09.379604"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "address", "host_id", "interest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Reading Night"], ["address", "45 Pennsylvania Ave"], ["host_id", 2], ["interest_id", 1], ["created_at", "2019-01-02 21:39:09.388735"], ["updated_at", "2019-01-02 21:39:09.388735"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mEventsGuest Create (0.5ms)[0m  [1m[32mINSERT INTO "events_guests" ("event_id", "guest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 1], ["guest_id", 2], ["created_at", "2019-01-02 21:39:09.405595"], ["updated_at", "2019-01-02 21:39:09.405595"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mEventsGuest Create (0.7ms)[0m  [1m[32mINSERT INTO "events_guests" ("event_id", "guest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 2], ["guest_id", 1], ["created_at", "2019-01-02 21:39:09.411546"], ["updated_at", "2019-01-02 21:39:09.411546"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20181230174336)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "name" varchar, "email" varchar, "points" integer, "age" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174336_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174336"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateEvents (20181230174428)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "datetime" datetime, "points" integer, "host_id" integer, "interest_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174428_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174428"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateInterests (20181230174540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "interests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181230174540_create_interests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230174540"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateEventsGuests (20190102162207)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events_guests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "guest_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190102162207_create_events_guests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102162207"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddPasswordDigestToUser (20190102211922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190102211922_add_password_digest_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102211922"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-02 21:41:01.412933"], ["updated_at", "2019-01-02 21:41:01.412933"]]
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:16
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ db/seeds.rb:17
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "points", "age", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "rkim"], ["name", "Robin Kim"], ["email", "rkim@gmail.com"], ["points", 0], ["age", 24], ["created_at", "2019-01-02 21:43:54.125050"], ["updated_at", "2019-01-02 21:43:54.125050"], ["password_digest", "$2a$10$n9ce6DJPgmj0CVvFie9yk.NKBvrl0gfy9BJZ8U0ck68Fqyq3zJTQa"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "points", "age", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jbenjamin"], ["name", "Jonnel Benjamin"], ["email", "jbenj@gmail.com"], ["points", 0], ["age", 23], ["created_at", "2019-01-02 21:43:54.206165"], ["updated_at", "2019-01-02 21:43:54.206165"], ["password_digest", "$2a$10$jf/UsX1GP0sPjx5HHzd7D.tJg5fCPjjAcFxUyN369jsR0rZvT8q2C"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mInterest Create (0.6ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Reading"], ["created_at", "2019-01-02 21:43:54.218791"], ["updated_at", "2019-01-02 21:43:54.218791"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mInterest Create (0.9ms)[0m  [1m[32mINSERT INTO "interests" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Baking"], ["created_at", "2019-01-02 21:43:54.229254"], ["updated_at", "2019-01-02 21:43:54.229254"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mEvent Create (0.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "address", "datetime", "points", "host_id", "interest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bake Off"], ["address", "234 Good Ave"], ["datetime", "2019-01-02 21:43:54.236323"], ["points", 5], ["host_id", 1], ["interest_id", 2], ["created_at", "2019-01-02 21:43:54.293484"], ["updated_at", "2019-01-02 21:43:54.293484"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "address", "host_id", "interest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Reading Night"], ["address", "45 Pennsylvania Ave"], ["host_id", 2], ["interest_id", 1], ["created_at", "2019-01-02 21:43:54.300519"], ["updated_at", "2019-01-02 21:43:54.300519"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mEventsGuest Create (0.5ms)[0m  [1m[32mINSERT INTO "events_guests" ("event_id", "guest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 1], ["guest_id", 2], ["created_at", "2019-01-02 21:43:54.321598"], ["updated_at", "2019-01-02 21:43:54.321598"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mEventsGuest Create (0.6ms)[0m  [1m[32mINSERT INTO "events_guests" ("event_id", "guest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 2], ["guest_id", 1], ["created_at", "2019-01-02 21:43:54.327510"], ["updated_at", "2019-01-02 21:43:54.327510"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:44:23 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (329.3ms)
+Completed 500 Internal Server Error in 399ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fce3199c198>:0x007fce3453d478>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2604457405812372988_70261809020840'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2604457405812372988_70261809020840'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:45:24 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (356.5ms)
+Completed 500 Internal Server Error in 425ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007f89ee26ae10>:0x007f89ee268278>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb__3999625189155275454_70115229817460'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__3999625189155275454_70115229817460'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:48:01 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (265.6ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007f89ee26ae10>:0x007f89f2a5e640>):
+     8:   <%= label :username, "Username" %>
+     9:   <%= text_field_tag :username %>
+    10:   <br>
+    11:   <%= label :password, “Password” %>
+    12:   <%= password_field_tag :password %>
+    13:   <br>
+    14:   <%= submit_tag “Login” %>
+  
+app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb__3999625189155275454_70115191144360'
+app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__3999625189155275454_70115191144360'
+app/controllers/sessions_controller.rb:6:in `new'
+Started GET "/login" for 127.0.0.1 at 2019-01-02 16:49:19 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 604ms (Views: 602.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-01-02 16:51:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"clc0Gm/yKVTANG+xgyGretIp5moBia0JBdEUoL/5a0PVy6bj5E+LUtMGbN0iYfyaka4brXikRsh3LZ8sR0FCrw==", "username"=>"rkim", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/events
+Completed 302 Found in 103ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 16:51:00 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 88ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
