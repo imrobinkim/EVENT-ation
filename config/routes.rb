@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
-  resources :users, only: [:index, :new, :show, :create]
+  resources :users, only: [:index, :new, :show, :create, :edit, :update]
   resources :events, only: [:index, :new, :show, :create]
   resources :interests, only: [:index, :show]
   get "/login", to: "sessions#new"

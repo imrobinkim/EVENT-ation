@@ -17,7 +17,10 @@ Interest: <%=f.collection_select :interest_id, Interest.all, :id, :name%>
 <%= f.datetime_select :datetime %>
 </div>
 <br>
-
+<br>
+<% if current_user %>
+<%= f.hidden_field :host_id, value: current_user.id%>
+<% end %>
 
 <%= f.submit "Sign Up" %>
 <% end %>
