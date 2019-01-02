@@ -1,0 +1,21 @@
+<h2><%= @event.name%></h2>
+
+<li>
+  <%= @event.address %>
+</li>
+<li>
+<%= @event.datetime %>
+</li>
+<li>
+<%= @event.points %>
+</li>
+<li>
+
+<%= @event.host.name %>
+</li>
+<li>
+
+<%= @event.interest.name %>
+</li>
+
+<%= link_to "Attend this Event" %>
