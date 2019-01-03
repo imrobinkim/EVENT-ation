@@ -13,6 +13,8 @@
     <% if current_user %>
         Signed in as <%= current_user.name %>  |
         <%= link_to "User Homepage", current_user %>  |
+        <%= link_to "Create New Event", new_event_path %>  |
+        <%= link_to "All Events", events_path %>  |
         <%= link_to "Logout", '/logout'%>
     <% else %>
         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>

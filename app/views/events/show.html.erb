@@ -6,10 +6,16 @@
   <% else %>
     <li>Host: <%= @event.host.name %></li>
   <% end %>
+
   <li>Interest: <%= @event.interest.name %></li>
+
   <li>Address: <%= @event.address %></li>
+
   <li>Date & Time: <%= @event.datetime %></li>
-  <li>Need 100 points to attend!</li>
+
+  <% if !(@event.host == current_user) %>
+    <li>Need 100 points to attend!</li>
+  <% end %>
 </ul>
 
 <% if !(@event.host == current_user) %>
@@ -18,4 +24,7 @@
   <% end %>
 <% end %>
 
+<% if @event.host == current_user %>
+  <%= link_to "Edit This Event", edit_event_path(@event) %> |
+<% end %>
 <%= link_to "All Events", events_path %>
