@@ -15,7 +15,9 @@ class Event < ApplicationRecord
   end
 
   def add_guest_to_event(guest_obj)
-    self.guests << guest_obj
+    if !(self.guests.include?(guest_obj))
+      self.guests << guest_obj
+    end
   end
 
 end

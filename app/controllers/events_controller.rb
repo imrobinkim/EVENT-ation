@@ -29,9 +29,13 @@ class EventsController < ApplicationController
 
   def add_guest_to_event
     @event = Event.find(params[:event_id])
-    if @event.add_guest_to_event(current_user)
-      flash[:notice] = "Can't wait to see you there!"
+    if current_user.has_enough_points? && @event.add_guest_to_event(current_user)
+      current_user.subtract_points
+      flash[:notice] = "You now have #{@event.host.points} points! Can't wait to see you there!"
       redirect_to current_user
+    else
+      flash[:notice] = "Sorry, you don't have enough points to attend. Maybe it's time to host one!"
+      redirect_to @event
     end
   end
 
