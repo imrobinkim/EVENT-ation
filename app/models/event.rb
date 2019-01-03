@@ -6,5 +6,11 @@ class Event < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
-  validates :interest, presence: true 
+  validate :event_date_cannot_be_in_the_past
+
+  def event_date_cannot_be_in_the_past
+    if datetime.present? && datetime.past?
+      errors.add(:date, "of event can't be in the past")
+    end
+  end
 end

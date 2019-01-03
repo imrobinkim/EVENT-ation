@@ -3494,3 +3494,354 @@ Processing by EventsController#new as HTML
 Completed 200 OK in 59ms (Views: 43.7ms | ActiveRecord: 1.6ms)
 
 
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:37:40 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+wTufcYDq8P/wDuzKC4xzVzuQjcDtOnlga6oL6YCtzxzA1l9+n0wdfHB9+ebJNp5TjH9oB6dZWobhVpiA4DYA==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"33", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `event_params' for #<EventsController:0x007f8b01a45360>
+Did you mean?  event_path):
+  
+app/controllers/events_controller.rb:16:in `create'
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:38:44 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+wTufcYDq8P/wDuzKC4xzVzuQjcDtOnlga6oL6YCtzxzA1l9+n0wdfHB9+ebJNp5TjH9oB6dZWobhVpiA4DYA==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"33", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Unpermitted parameters: :interest_id, :host_id
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.3ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 56ms (Views: 34.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:38:49 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ivdmn/8pfZkVcfHIxQS5bxSTst8y0JnCruGBMBqI62RY13hD/9iH981J9vmXyJLBxNjMIW6kP/CQiS75LB7i2A==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"33", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Unpermitted parameters: :interest_id, :host_id
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.5ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 22:38:59 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered events/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 47ms (Views: 39.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:39:03 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+wTufcYDq8P/wDuzKC4xzVzuQjcDtOnlga6oL6YCtzxzA1l9+n0wdfHB9+ebJNp5TjH9oB6dZWobhVpiA4DYA==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"33", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Unpermitted parameters: :interest_id, :host_id
+  [1m[36mEvent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.2ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 42ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:39:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.3ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:39:17 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"STCJakJRCTdeebisxShWojMDpeoVFjrc2cPqIKd99kYzEJe2QqDzWYZBv52X5H0M40jbFElinO7nq0Xpkev/+g==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"39", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Unpermitted parameters: :interest_id, :host_id
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.3ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:39:41 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.4ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 83ms (Views: 58.6ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:39:43 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GUlgPJNknY5M9SDLugBTgcuKJrsD5ecNWZOhq32bmm9jaX7gk5Vn4JTNJ/rozHgvG8FYRV+RQT9n+w5iSw2T0w==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"39", "host_id"=>"1"}, "commit"=>"Sign Up"}
+Unpermitted parameters: :interest_id, :host_id
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.7ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 22:40:42 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered events/index.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:40:45 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.5ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:40:47 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oXWmfmg6OXOUxnyhBrONXrvK8xr3/sFiU4G2WnA8hSkpchF+VESixZrHsPW1uWbqqRVMjerXTe3JqkQX1b7qA==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"40", "host_id"=>"1"}, "commit"=>"Sign Up"}
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.9ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:41:10 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.4ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 70ms (Views: 53.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:41:12 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4gs5eBsH9JaWJOTn2XCY4VgncG/BZ4fnOjiDtZeX65KYKyekG/YO+E4c49aLvLNPiGwOkZ0TIdUEUCx8oQHiLg==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"41", "host_id"=>"1"}, "commit"=>"Sign Up"}
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.4ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:44:32 -0500
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/robinkim/Development/2-Module/FINALPROJECT/EVENT-ation/app/models/event.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/event.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/events_controller.rb:12:in `new'
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:44:43 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.3ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 60ms (Views: 43.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:44:44 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7+jvmqVEW+RoceztwHvosw8kktVsY99bvIFHFAwRS46VyPFGpbWhirBJ69ySt8Md32/sKzAXeWmC6ejdOodCMg==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"44", "host_id"=>"1"}, "commit"=>"Sign Up"}
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.1ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 39ms (Views: 31.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 22:44:58 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered events/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:45:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.5ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:45:02 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"STOTitSW3hjLKeodpzqvX1K6VZGwWsDMh8EdKBe5a70zE41W1GckdhMR7Sz19oTxgvErb+wuZv65qbLhIS9iAQ==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"45", "host_id"=>"1"}, "commit"=>"Sign Up"}
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.2ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 22:45:18 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered events/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 46ms (Views: 38.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-02 22:45:20 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.3ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-02 22:45:22 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+vjy8HInqP317pjeFeMfRRnaU/oRWf5gHqpCWWCgMgWA2OwsctZSky3Wn+9HLzTryZEtBE0tWFIgwu2QVjY7uQ==", "event"=>{"name"=>"", "address"=>"", "interest_id"=>"1", "datetime(1i)"=>"2019", "datetime(2i)"=>"1", "datetime(3i)"=>"3", "datetime(4i)"=>"03", "datetime(5i)"=>"45", "host_id"=>"1"}, "commit"=>"Sign Up"}
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:17
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (1.1ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/new.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered events/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-02 22:45:58 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered events/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2019-01-02 22:45:59 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:8
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:7
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT  "interests".* FROM "interests" WHERE "interests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:8
+  Rendered events/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
