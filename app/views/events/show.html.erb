@@ -1,21 +1,35 @@
 <div class="jumbotron">
 
-<h2><%= @event.name%></h2>
-<li class="list-group-item">
-  <%= @event.address %>
-</li>
-<li class="list-group-item">
-<%= @event.datetime %>
-</li>
+<ul>
+  <% if @event.host == current_user %>
+    <li class="list-group-item">Host: You're hosting!</li>
+  <% else %>
+    <li class="list-group-item">Host: <%= @event.host.name %></li>
+  <% end %>
 
-<li class="list-group-item">
+  <li class="list-group-item">Interest: <%= @event.interest.name %></li>
 
-<%= @event.host.name %>
-</li>
-<li class="list-group-item">
+  <li class="list-group-item">Address: <%= @event.address %></li>
 
-<%= @event.interest.name %>
-</li>
+  <li class="list-group-item">Date & Time: <%= @event.datetime %></li>
 
-<%= link_to "Attend this Event" %>
-</div>
+  <% if !(@event.host == current_user) && !(current_user.already_attending(@event)) %>
+    <li class="list-group-item">Need 100 points to attend!</li>
+  <% end %>
+
+  <% if current_user.already_attending(@event)%>
+    <li class="list-group-item">You're attending this event!</li>
+  <% end %>
+</ul>
+
+
+<% if !(@event.host == current_user) && !(current_user.already_attending(@event))%>
+  <%= form_tag add_guest_path(@event.id), method: :patch do %>
+    <%= submit_tag "Attend this Event" %>
+  <% end %>
+<% end %>
+
+<% if @event.host == current_user %>
+  <%= link_to "Edit This Event", edit_event_path(@event) %> |
+  <%= link_to "Homepage", current_user %>
+<% end %>

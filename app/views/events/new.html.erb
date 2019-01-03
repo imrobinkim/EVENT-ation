@@ -3,22 +3,5 @@
 <h2>New Event</h2>
 <%= bootstrap_form_for @event do |f| %>
 
-
-<%= f.text_field :name %>
-
-
-<%= f.text_field :address %>
-<%=f.collection_select :interest_id, Interest.all, :id, :name%>
-
-
-
-<%= f.datetime_local_field :datetime %>
-
-<br>
-<% if current_user %>
-<%= f.hidden_field :host_id, value: current_user.id%>
-<% end %>
-
-<%= f.submit "Sign Up" %>
-<% end %>
-</div>
+<%= render partial: "shared/error_list", locals: {new_object: @event} %>
+<%= render partial: "event_form", locals: { submit_text: 'Create Event'} %>

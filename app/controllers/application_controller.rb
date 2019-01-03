@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :first_name, :last_name, :no_empty_fields, :events_attending
+  helper_method :current_user, :first_name, :last_name, :no_empty_fields, :events_attending, :logged_in?
 
-  def current_user #MEMOIZATION
+
+  def current_user
     if @current_user
       @current_user
     else
@@ -29,4 +30,7 @@ class ApplicationController < ActionController::Base
      end
   end
 
+  def logged_in?
+    current_user != nil
+  end
 end

@@ -11,7 +11,11 @@
 
   <body>
     <% if current_user %>
-        Welcome <%= link_to first_name(current_user.name), user_path(current_user) %>  <%= link_to "Logout", '/logout'%>
+        Welcome <%= first_name(current_user.name) %>  |
+        <%= link_to "User Homepage", current_user %>  |
+        <%= link_to "Create New Event", new_event_path %>  |
+        <%= link_to "All Events", events_path %>  |
+        <%= link_to "Logout", '/logout'%>
     <% else %>
 
     <nav class="nav nav-pills nav-fill fixed-top">
@@ -20,6 +24,11 @@
          <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
        </nav>
     <% end %>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info" %>
+    <% end %>
+
   <%= yield %>
 
   <div id="sky">

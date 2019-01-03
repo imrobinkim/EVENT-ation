@@ -8,4 +8,18 @@
 <li>Email: <%= @user.email%> </li>
 <li>Age: <%= @user.age%></li>
 <li>Events attended: <%= events_attending(@user)%></li>
+<h2>Events you are hosting</h2>
+
+<ul>
+<% @user.events.each do |event| %>
+  <li><%= link_to event.name, event %></li>
+<% end %>
+</ul>
+
+<h2>Events you are attending</h2>
+
+<ul>
+<% @user.events_user_is_attending.each do |event| %>
+  <li><%= link_to event.name, event %></li>
+<% end %>
 </ul>

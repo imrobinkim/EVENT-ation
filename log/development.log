@@ -1646,15 +1646,15 @@ Completed 200 OK in 73ms (Views: 47.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/users" for 127.0.0.1 at 2019-01-02 15:33:50 -0500
-  
+
 ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
-  
+
 app/controllers/application_controller.rb:1:in `<main>'
 app/controllers/users_controller.rb:1:in `<main>'
 Started GET "/user" for 127.0.0.1 at 2019-01-02 15:33:58 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/user"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1683,9 +1683,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/user/new" for 127.0.0.1 at 2019-01-02 15:34:12 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1714,15 +1714,15 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:34:27 -0500
-  
+
 ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
-  
+
 app/controllers/application_controller.rb:1:in `<main>'
 app/controllers/users_controller.rb:1:in `<main>'
 Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:35:32 -0500
-  
+
 ActionController::RoutingError (Couldn't find UsersHelper, expected it to be defined in helpers/users_helper.rb):
-  
+
 app/controllers/application_controller.rb:1:in `<main>'
 app/controllers/users_controller.rb:1:in `<main>'
 Started GET "/users/new" for 127.0.0.1 at 2019-01-02 15:36:33 -0500
@@ -1739,15 +1739,15 @@ Processing by EventsController#new as HTML
 Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (First argument in form cannot contain nil or be empty):
     1: <h2>New Event</h2>
-    2: 
+    2:
     3: <%= form_for @event do |f| %>
-    4: 
+    4:
     5: <%=f.label :name %>
     6: <%= f.text_field :name %>
-  
+
 app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171332293520'
 Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:41:21 -0500
 Processing by EventsController#new as HTML
@@ -1756,15 +1756,15 @@ Processing by EventsController#new as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (First argument in form cannot contain nil or be empty):
     1: <h2>New Event</h2>
-    2: 
+    2:
     3: <% form_for @event do |f| %>
-    4: 
+    4:
     5: <%=f.label :name %>
     6: <%= f.text_field :name %>
-  
+
 app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171373002700'
 Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:41:55 -0500
 Processing by EventsController#new as HTML
@@ -1773,16 +1773,16 @@ Processing by EventsController#new as HTML
 Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `email' for #<Event:0x007fa412d7b000>):
     12: <%= f.text_field :name %>
-    13: 
+    13:
     14: <%=f.label :email %>
     15: <%= f.text_field :email %>
-    16: 
+    16:
     17: <%=f.label :age %>
     18: <%= f.text_field :age %>
-  
+
 app/views/events/new.html.erb:15:in `block in _app_views_events_new_html_erb___4221183299359651397_70171366851120'
 app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___4221183299359651397_70171366851120'
 Started GET "/events/new" for 127.0.0.1 at 2019-01-02 15:43:09 -0500
@@ -1870,9 +1870,9 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `current_user' for #<SessionsController:0x007fc74fce3240>):
-  
+
 app/controllers/sessions_controller.rb:3:in `new'
 Started GET "/login" for 127.0.0.1 at 2019-01-02 16:14:57 -0500
 Processing by SessionsController#new as HTML
@@ -1883,7 +1883,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 422ms (ActiveRecord: 3.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc74fd40b48>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -1892,7 +1892,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247007282780'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247007282780'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -1905,7 +1905,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“password”' for #<#<Class:0x007fc74fd54940>:0x007fc750995420>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -1914,7 +1914,7 @@ ActionView::Template::Error (undefined local variable or method `“password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247013681080'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247013681080'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -1927,7 +1927,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -1936,7 +1936,7 @@ ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4))
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247014034220'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247014034220'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -1949,7 +1949,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc753069808>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -1958,7 +1958,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247009891680'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247009891680'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -1971,7 +1971,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74fd54940>:0x007fc74ffa6f40>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -1980,7 +1980,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247008511800'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247008511800'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2014,7 +2014,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc74f55b590>:0x007fc74f551c20>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2023,7 +2023,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247003084200'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247003084200'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2036,7 +2036,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fc7531899e0>:0x007fc753183540>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2045,7 +2045,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2811557513318635572_70247034651700'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2811557513318635572_70247034651700'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2123,7 +2123,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 482ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fcf870b2440>:0x007fcf832c3850>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2132,7 +2132,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___3987940293912880275_70264617858520'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3987940293912880275_70264617858520'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2145,7 +2145,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fcf870b2440>:0x007fcf81bbe448>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2154,7 +2154,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___3987940293912880275_70264605726040'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___3987940293912880275_70264605726040'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2163,9 +2163,9 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 8218ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SystemExit (exit):
-  
+
 (byebug):1:in `exit'
 (byebug):1:in `new'
 app/controllers/sessions_controller.rb:4:in `new'
@@ -2180,7 +2180,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 412ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fbdb7980d10>:0x007fbdb332a118>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2189,7 +2189,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2734106923498672601_70226410760740'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2734106923498672601_70226410760740'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2379,7 +2379,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 399ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007fce3199c198>:0x007fce3453d478>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2388,7 +2388,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb___2604457405812372988_70261809020840'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb___2604457405812372988_70261809020840'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2403,7 +2403,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 425ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007f89ee26ae10>:0x007f89ee268278>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2412,7 +2412,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb__3999625189155275454_70115229817460'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__3999625189155275454_70115229817460'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2425,7 +2425,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `“Password”' for #<#<Class:0x007f89ee26ae10>:0x007f89f2a5e640>):
      8:   <%= label :username, "Username" %>
      9:   <%= text_field_tag :username %>
@@ -2434,7 +2434,7 @@ ActionView::Template::Error (undefined local variable or method `“Password”'
     12:   <%= password_field_tag :password %>
     13:   <br>
     14:   <%= submit_tag “Login” %>
-  
+
 app/views/sessions/new.html.erb:11:in `block in _app_views_sessions_new_html_erb__3999625189155275454_70115191144360'
 app/views/sessions/new.html.erb:7:in `_app_views_sessions_new_html_erb__3999625189155275454_70115191144360'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -2501,9 +2501,9 @@ Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/user/new" for 127.0.0.1 at 2019-01-02 17:04:29 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2532,9 +2532,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/user/new" for 127.0.0.1 at 2019-01-02 17:04:34 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2590,7 +2590,7 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x007f89f2d68b88>
 Did you mean?  password_field):
      7: <br>
@@ -2600,7 +2600,7 @@ Did you mean?  password_field):
     11: <br>
     12: <br>
     13: <%=f.label :name %>
-  
+
 app/views/users/new.html.erb:10:in `block in _app_views_users_new_html_erb___1886489037096305994_70115230811540'
 app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1886489037096305994_70115230811540'
 Started GET "/users/new" for 127.0.0.1 at 2019-01-02 17:07:17 -0500
@@ -2912,9 +2912,9 @@ Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/signup" for 127.0.0.1 at 2019-01-02 18:05:26 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/signup"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3238,13 +3238,13 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/events/show.html.erb:21: syntax error, unexpected ')'
 '.freeze;@output_buffer.append=( link_to "Attend this Event", );
                                                                ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/events/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/events/show.html.erb:26: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/events/show.html.erb:21: syntax error, unexpected ')'
 app/views/events/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
 app/views/events/show.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
@@ -3281,9 +3281,9 @@ Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/events/2/dsdf" for 127.0.0.1 at 2019-01-02 18:25:55 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/events/2/dsdf"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -3450,13 +3450,13 @@ Processing by EventsController#index as HTML
   Rendering events/index.html.erb within layouts/application
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
   ↳ app/views/events/index.html.erb:4
-  Rendered events/index.html.erb within layouts/application (2.9ms)
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
+  Rendered events/index.html.erb within layouts/application (33.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:8
-Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+Completed 200 OK in 65ms (Views: 58.7ms | ActiveRecord: 0.8ms)
 
 
-Started GET "/events/1" for 127.0.0.1 at 2019-01-02 18:54:23 -0500
+Started GET "/events/1" for 127.0.0.1 at 2019-01-02 22:09:49 -0500
 Processing by EventsController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
@@ -3653,12 +3653,12 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `first_name' for #<#<Class:0x007f89ee107910>:0x007f89ee105b10>):
     1: <h2>New User</h2>
     2: <%= render partial: "shared/error_list", locals: {new_object: @user} %>
     3: <%= render partial: "user_form", locals: { name: first_name, submit_text: 'Sign Up'} %>
-  
+
 app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1886489037096305994_70115199771760'
 Started GET "/signup" for 127.0.0.1 at 2019-01-02 20:52:15 -0500
 Processing by UsersController#new as HTML
@@ -3668,12 +3668,12 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 414ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `first_name' for #<#<Class:0x007f89ee107910>:0x007f89ef91ba10>):
     1: <h2>New User</h2>
     2: <%= render partial: "shared/error_list", locals: {new_object: @user} %>
     3: <%= render partial: "user_form", locals: { :name => first_name, submit_text: 'Sign Up'} %>
-  
+
 app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1886489037096305994_70115190680600'
 Started GET "/signup" for 127.0.0.1 at 2019-01-02 20:52:37 -0500
 Processing by UsersController#new as HTML
@@ -3750,16 +3750,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 326ms (ActiveRecord: 2.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for #<#<Class:0x007f89f66a9190>:0x007f89ee507740>):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= first_name(current_user.name) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1938156496726858187_70115260767940'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:09:56 -0500
 Processing by EventsController#index as HTML
@@ -3772,16 +3772,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= first_name(@current_user.name) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1938156496726858187_70115282621420'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:10:18 -0500
 Processing by EventsController#index as HTML
@@ -3794,16 +3794,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for #<#<Class:0x007f89f66a9190>:0x007f89ee4cc3e8>):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= first_name(current_user.name) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1938156496726858187_70115275391340'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:10:42 -0500
 Processing by EventsController#index as HTML
@@ -3818,11 +3818,11 @@ Completed 500 Internal Server Error in 389472ms (ActiveRecord: 0.4ms)
 
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:17:11 -0500
 Processing by EventsController#index as HTML
-  
+
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:17:11 -0500
 SystemExit (exit):
 Processing by EventsController#index as HTML
-  
+
   Rendering events/index.html.erb within layouts/application
 (byebug):1:in `exit'
 (byebug):1:in `_app_views_layouts_application_html_erb___1938156496726858187_70115237796940'
@@ -3851,16 +3851,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 685ms (ActiveRecord: 2.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for "Robin Kim":String):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= current_user.name.first_name %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317474571720'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:20:04 -0500
 Processing by EventsController#index as HTML
@@ -3873,16 +3873,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 164ms (ActiveRecord: 3.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for "Robin Kim":String):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= current_user.name.first_name %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317486200300'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:22:16 -0500
 Processing by EventsController#index as HTML
@@ -3895,16 +3895,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 151ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for "Robin Kim":String):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= current_user.name.first_name %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317454371860'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:22:53 -0500
 Processing by EventsController#index as HTML
@@ -3917,16 +3917,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 102ms (ActiveRecord: 1.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for "Robin Kim":String):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= current_user.name.first_name %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317476751840'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:22:56 -0500
 Processing by EventsController#index as HTML
@@ -3939,16 +3939,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for "Robin Kim":String):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= current_user.name.first_name %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317444815120'
 Started GET "/events" for 127.0.0.1 at 2019-01-02 21:23:21 -0500
 Processing by EventsController#index as HTML
@@ -3983,16 +3983,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 447ms (ActiveRecord: 6.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for #<EventsController:0x007fe8258633b8>):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= first_name(current_user.name) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317515614840'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:04:06 -0500
 Processing by EventsController#index as HTML
@@ -4003,16 +4003,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 121ms (ActiveRecord: 1.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `helper_method' for #<Class:0x007fe81c5fb9a8>):
     10:   </head>
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= first_name(current_user.name) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-  
+
 app/models/user.rb:15:in `<class:User>'
 app/models/user.rb:1:in `<main>'
 app/controllers/application_controller.rb:8:in `current_user'
@@ -4104,7 +4104,7 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/models/event.rb:9: syntax error, unexpected '<'
       <li>
        ^
@@ -4112,7 +4112,7 @@ SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalPro
       </li>
        ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/models/event.rb:11: unterminated regexp meets end of file):
-  
+
 app/models/event.rb:9: syntax error, unexpected '<'
 app/models/event.rb:11: syntax error, unexpected '<', expecting keyword_end
 app/models/event.rb:11: unterminated regexp meets end of file
@@ -4127,16 +4127,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `no_empty_fields' for #<#<Class:0x007fe821d690f0>:0x007fe8204f6fe0>):
     1: <h2><%= @event.name%></h2>
-    2: 
-    3: 
+    2:
+    3:
     4: <%=no_empty_fields(@event)%>
-    5: 
-    6: 
+    5:
+    6:
     7: <li>
-  
+
 app/views/events/show.html.erb:4:in `_app_views_events_show_html_erb__2359166215152709373_70317488426300'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:21:48 -0500
 Processing by EventsController#show as HTML
@@ -4144,9 +4144,9 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NoMethodError (undefined method `helper_method' for #<Class:0x007fe82063e718>):
-  
+
 app/models/event.rb:7:in `<class:Event>'
 app/models/event.rb:1:in `<main>'
 app/controllers/events_controller.rb:8:in `show'
@@ -4156,9 +4156,9 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NoMethodError (undefined method `helper_method' for #<Class:0x007fe8240a1310>):
-  
+
 app/models/event.rb:7:in `<class:Event>'
 app/models/event.rb:1:in `<main>'
 app/controllers/events_controller.rb:8:in `show'
@@ -4172,16 +4172,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (private method `select' called for #<Event:0x007fe81d92fe20>):
     1: <h2><%= @event.name%></h2>
-    2: 
-    3: 
+    2:
+    3:
     4: <%=no_empty_fields(@event)%>
-    5: 
-    6: 
+    5:
+    6:
     7: <li>
-  
+
 app/controllers/application_controller.rb:21:in `no_empty_fields'
 app/views/events/show.html.erb:4:in `_app_views_events_show_html_erb__2359166215152709373_70317436384300'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:26:34 -0500
@@ -4194,16 +4194,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `collect' for #<Event:0x007fe8242d2648>):
     1: <h2><%= @event.name%></h2>
-    2: 
-    3: 
+    2:
+    3:
     4: <%=no_empty_fields(@event)%>
-    5: 
-    6: 
+    5:
+    6:
     7: <li>
-  
+
 app/controllers/application_controller.rb:21:in `no_empty_fields'
 app/views/events/show.html.erb:4:in `_app_views_events_show_html_erb__2359166215152709373_70317508036940'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:26:44 -0500
@@ -4216,16 +4216,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for #<Event:0x007fe825021b78>):
     1: <h2><%= @event.name%></h2>
-    2: 
-    3: 
+    2:
+    3:
     4: <%=no_empty_fields(@event)%>
-    5: 
-    6: 
+    5:
+    6:
     7: <li>
-  
+
 app/controllers/application_controller.rb:21:in `no_empty_fields'
 app/views/events/show.html.erb:4:in `_app_views_events_show_html_erb__2359166215152709373_70317515014840'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:26:52 -0500
@@ -4238,16 +4238,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActionView::Template::Error (private method `select' called for #<Event:0x007fe81db6ca58>):
     1: <h2><%= @event.name%></h2>
-    2: 
-    3: 
+    2:
+    3:
     4: <%=no_empty_fields(@event)%>
-    5: 
-    6: 
+    5:
+    6:
     7: <li>
-  
+
 app/controllers/application_controller.rb:21:in `no_empty_fields'
 app/views/events/show.html.erb:4:in `_app_views_events_show_html_erb__2359166215152709373_70317453814500'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:28:31 -0500
@@ -4260,16 +4260,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `events' for nil:NilClass):
      6: <li>
      7: <%= @event.datetime %>
      8: </li>
      9: <%= @user.events%>
     10: <li>
-    11: 
+    11:
     12: <%= @event.host.name %>
-  
+
 app/views/events/show.html.erb:9:in `_app_views_events_show_html_erb__2359166215152709373_70317509793300'
 Started GET "/events/2" for 127.0.0.1 at 2019-01-03 09:28:41 -0500
 Processing by EventsController#show as HTML
@@ -4361,19 +4361,19 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:14: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
 ...first_name(current_user.name) );@output_buffer.safe_append='...
 ...                               ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
-'.freeze;     else 
+'.freeze;     else
                   ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/layouts/application.html.erb:14: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
 app/views/layouts/application.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
 app/views/layouts/application.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
@@ -4390,16 +4390,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317475816960'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:36:53 -0500
 Processing by EventsController#index as HTML
@@ -4412,16 +4412,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path(@user) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317506923520'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:38:34 -0500
 Processing by EventsController#index as HTML
@@ -4434,16 +4434,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317455387920'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:38:43 -0500
 Processing by EventsController#index as HTML
@@ -4474,16 +4474,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317455668960'
 Started GET "/users" for 127.0.0.1 at 2019-01-03 09:39:12 -0500
 Processing by UsersController#index as HTML
@@ -4502,9 +4502,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
-  
+
 app/controllers/users_controller.rb:8:in `show'
 Started GET "/users" for 127.0.0.1 at 2019-01-03 09:39:18 -0500
 Processing by UsersController#index as HTML
@@ -4545,9 +4545,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
-  
+
 app/controllers/users_controller.rb:8:in `show'
 Started GET "/users/id" for 127.0.0.1 at 2019-01-03 09:40:30 -0500
 Processing by UsersController#show as HTML
@@ -4557,9 +4557,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
-  
+
 app/controllers/users_controller.rb:8:in `show'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:40:33 -0500
 Processing by EventsController#index as HTML
@@ -4572,16 +4572,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317520209100'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:41:54 -0500
 Processing by EventsController#index as HTML
@@ -4594,16 +4594,16 @@ Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
-    11: 
+    11:
     12:   <body>
     13:     <% if current_user %>
     14:         Welcome <%= link_to first_name(current_user.name), user_path(@current_user) %>  <%= link_to "Logout", '/logout'%>
     15:     <% else %>
     16:         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     17:     <% end %>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___972234215100437470_70317454825100'
 Started GET "/events" for 127.0.0.1 at 2019-01-03 09:42:02 -0500
 Processing by EventsController#index as HTML
@@ -4702,13 +4702,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `split' for #<User:0x007fe8228938e0>):
-    2: 
+    2:
     3: <%= @user.username%>
-    4: 
+    4:
     5: <%= first_name(@user) %>
-  
+
 app/controllers/application_controller.rb:13:in `first_name'
 app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___4462960060493982669_70317494275140'
 Started GET "/users/1" for 127.0.0.1 at 2019-01-03 09:45:37 -0500
@@ -4805,7 +4805,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `event' for #<User:0x007fe823b281e0>
 Did you mean?  events
                events=):
@@ -4813,7 +4813,7 @@ Did you mean?  events
     7: Email: <%= @user.email%> <br>
     8: Age: <%= @user.age%>
     9: Events attended: <%= @user.event%>
-  
+
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb___4462960060493982669_70317489584020'
 Started GET "/users/1" for 127.0.0.1 at 2019-01-03 09:48:30 -0500
 Processing by UsersController#show as HTML
@@ -5215,13 +5215,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
     6: Username: <%= @user.username%> <br>
     7: Email: <%= @user.email%> <br>
     8: Age: <%= @user.age%><br>
     9: Events attended: <%= events_attending(@user)%>
-  
+
 app/controllers/application_controller.rb:26:in `events_attending'
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb___4462960060493982669_70317503861860'
 Started GET "/users/1" for 127.0.0.1 at 2019-01-03 09:57:42 -0500
@@ -5250,13 +5250,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 74ms (ActiveRecord: 2.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     6: Username: <%= @user.username%> <br>
     7: Email: <%= @user.email%> <br>
     8: Age: <%= @user.age%><br>
     9: Events attended: <%= events_attending(@user)%>
-  
+
 app/controllers/application_controller.rb:26:in `block in events_attending'
 app/controllers/application_controller.rb:26:in `events_attending'
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb___4462960060493982669_70317488244500'
@@ -5300,13 +5300,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 80ms (ActiveRecord: 2.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `events' for #<Event:0x007fe823c87108>):
     6: Username: <%= @user.username%> <br>
     7: Email: <%= @user.email%> <br>
     8: Age: <%= @user.age%><br>
     9: Events attended: <%= events_attending(@user)%>
-  
+
 app/controllers/application_controller.rb:26:in `block in events_attending'
 app/controllers/application_controller.rb:26:in `events_attending'
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb___4462960060493982669_70317510408800'
@@ -5465,7 +5465,7 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 125ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: bootstrap.
 Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/config
@@ -5480,12 +5480,12 @@ Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/node_modules):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:   </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:15
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___972234215100437470_70317504389300'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 10:18:07 -0500
@@ -5497,7 +5497,7 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: bootstrap-custom.
 Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/config
@@ -5512,12 +5512,12 @@ Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/node_modules):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:   </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:15
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___972234215100437470_70317495810320'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 10:21:00 -0500
@@ -5529,7 +5529,7 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: bootstrap.
 Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/config
@@ -5544,12 +5544,12 @@ Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/node_modules):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:   </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:15
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___972234215100437470_70317446000280'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 10:24:14 -0500
@@ -5561,7 +5561,7 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: _bootstrap.
 Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/config
@@ -5576,12 +5576,12 @@ Load paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/node_modules):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:   </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:15
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___972234215100437470_70317489102680'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 10:25:31 -0500
@@ -5593,9 +5593,9 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (couldn't find file 'jquery3' with type 'application/javascript'
-Checked in these paths: 
+Checked in these paths:
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/config
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/images
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/assets/javascripts
@@ -5607,13 +5607,13 @@ Checked in these paths:
   /Users/jonnelbenjamin/.rvm/gems/ruby-2.3.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
   /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/node_modules):
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:   </head>
-    11: 
+    11:
     12:   <body>
-  
+
 app/assets/javascripts/application.js:17
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___972234215100437470_70317496918760'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 10:27:23 -0500
@@ -5715,11 +5715,11 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/sessions/new.html.erb:21: syntax error, unexpected keyword_class, expecting ')'
 ...pend=( submit_tag "Login" class="btn btn-primary btn-lg");@o...
 ...                               ^):
-  
+
 app/views/sessions/new.html.erb:21: syntax error, unexpected keyword_class, expecting ')'
 app/controllers/sessions_controller.rb:6:in `new'
 Started GET "/login" for 127.0.0.1 at 2019-01-03 10:37:47 -0500
@@ -6214,16 +6214,16 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.8ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting =>
 ...), 'nav-item nav-link active' );@output_buffer.safe_append='
 ...                               ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/layouts/application.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/layouts/application.html.erb:19: syntax error, unexpected ')', expecting =>
 app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
 app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
@@ -6239,18 +6239,18 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `current_class?' for #<#<Class:0x007ff6a5b4f7a0>:0x007ff6a6fe0278>
 Did you mean?  current_class
                current_page?):
-    16: 
+    16:
     17:     <nav class="nav nav-pills nav-fill fixed-top">
-    18: 
+    18:
     19:         <%= link_to 'Login', '/login', :class => current_class?('/login') %>
     20:          <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
     21:        </nav>
     22:     <% end %>
-  
+
 app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___4126944533370299299_70348669469240'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 12:14:32 -0500
 Processing by UsersController#new as HTML
@@ -6538,7 +6538,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of Symbol into Integer):
      8:   <% if flash.notice%>
      9:   <h3><%= flash.notice %></h3>
@@ -6547,7 +6547,7 @@ ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     12:   <%= label :username, "Username" %>
     13:   <%= text_field_tag :username %>
     14:   <br>
-  
+
 app/views/sessions/new.html.erb:11:in `_app_views_sessions_new_html_erb__2706195632325657294_70187929438420'
 app/controllers/sessions_controller.rb:6:in `new'
 Started GET "/login" for 127.0.0.1 at 2019-01-03 12:30:53 -0500
@@ -6559,7 +6559,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of Symbol into Integer):
      8:   <% if flash.notice%>
      9:   <h3><%= flash.notice %></h3>
@@ -6568,7 +6568,7 @@ ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     12:   <%= label :username, "Username" %>
     13:   <%= text_field_tag :username %>
     14:   <br>
-  
+
 app/views/sessions/new.html.erb:11:in `_app_views_sessions_new_html_erb__2706195632325657294_70187918154340'
 app/controllers/sessions_controller.rb:6:in `new'
 Started GET "/login" for 127.0.0.1 at 2019-01-03 12:31:03 -0500
@@ -6671,9 +6671,9 @@ Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.3ms)
 
 
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 12:32:22 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -7522,16 +7522,16 @@ Processing by EventsController#new as HTML
 Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:69
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187961436560'
 Started GET "/events/new" for 127.0.0.1 at 2019-01-03 15:06:27 -0500
@@ -7610,16 +7610,16 @@ Processing by EventsController#new as HTML
 Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "$l": expected selector or at-rule, was ": 90px"):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:30
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187956385500'
 Started GET "/events/1" for 127.0.0.1 at 2019-01-03 15:13:49 -0500
@@ -7652,16 +7652,16 @@ Processing by EventsController#show as HTML
 Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "			li": expected "{", was ""):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:203
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187974444380'
 Started GET "/login" for 127.0.0.1 at 2019-01-03 15:16:59 -0500
@@ -7763,9 +7763,9 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 4692ms (Views: 4686.2ms | ActiveRecord: 1.4ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/bird.svg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -7807,16 +7807,16 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "...name: fly-cycle": expected "{", was ";"):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:43
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187931799480'
 Started GET "/signup" for 127.0.0.1 at 2019-01-03 15:37:13 -0500
@@ -7830,9 +7830,9 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 4295ms (Views: 4290.8ms | ActiveRecord: 0.5ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/bird.svg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -7943,9 +7943,9 @@ Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.2ms)
 
 
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 15:40:44 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -7985,9 +7985,9 @@ Completed 200 OK in 123ms (Views: 119.3ms | ActiveRecord: 0.8ms)
 
 
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 15:47:55 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8097,9 +8097,9 @@ Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.2ms)
 
 
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 15:50:21 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8139,9 +8139,9 @@ Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 15:52:28 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8170,9 +8170,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started POST "/sessions/new" for 127.0.0.1 at 2019-01-03 15:54:21 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/sessions/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8470,9 +8470,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 4729ms (Views: 4726.5ms | ActiveRecord: 0.5ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8549,9 +8549,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.4ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8604,9 +8604,9 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 148ms (Views: 140.7ms | ActiveRecord: 0.4ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8682,10 +8682,10 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 5089ms (Views: 5071.6ms | ActiveRecord: 2.9ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -8719,7 +8719,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8762,7 +8762,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
 
 
-  
+
 SyntaxError (/Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/users/show.html.erb:7: unknown regexp option - l
 unmatched close parenthesis: /li>) );@output_buffer.safe_append='
 <li>Username: '.freeze;@output_buffer.append=( @user.username);@output_buffer.safe_append=' </i
@@ -8782,7 +8782,7 @@ unmatched close parenthesis: /li>) );@output_buffer.safe_append='
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/users/show.html.erb:11: unknown regexp option - l
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/users/show.html.erb:12: unterminated string meets end of file
 /Users/jonnelbenjamin/Desktop/Flatiron School/Module 2/Mod2FinalProject/EVENT-ation/app/views/users/show.html.erb:12: syntax error, unexpected end-of-input, expecting ')'):
-  
+
 app/views/users/show.html.erb:7: unknown regexp option - l
 app/views/users/show.html.erb:7: syntax error, unexpected '<'
 app/views/users/show.html.erb:8: syntax error, unexpected ':', expecting ')'
@@ -8806,10 +8806,10 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 123ms (Views: 116.4ms | ActiveRecord: 0.7ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -8843,7 +8843,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8890,12 +8890,12 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 81ms (Views: 71.5ms | ActiveRecord: 0.9ms)
 
 
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
-  
+
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -8974,10 +8974,10 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 4705ms (Views: 4696.8ms | ActiveRecord: 0.7ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -9011,7 +9011,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9136,9 +9136,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 4663ms (Views: 4656.7ms | ActiveRecord: 1.5ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9182,9 +9182,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 4748ms (Views: 4743.5ms | ActiveRecord: 0.4ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9228,9 +9228,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 3872ms (Views: 3866.3ms | ActiveRecord: 0.4ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9274,9 +9274,9 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 3662ms (Views: 3659.1ms | ActiveRecord: 0.6ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9329,12 +9329,12 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 0.7ms)
 
 
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
 ActionController::RoutingError (No route matches [GET] "/assets/pic.jpg"):
-  
-  
+
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9459,9 +9459,9 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 4546ms (Views: 4537.8ms | ActiveRecord: 1.1ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9508,9 +9508,9 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 6075ms (Views: 6062.4ms | ActiveRecord: 3.0ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9569,16 +9569,16 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "...ges/bg's/clouds": expected ")", was ".gif');"):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:41
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187951639800'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -9602,16 +9602,16 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "	background-image": expected ";", was ": url('https://..."):
      5:     <%= csrf_meta_tags %>
      6:     <%= csp_meta_tag %>
-     7: 
+     7:
      8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     10:     </head>
-    11: 
-  
+    11:
+
 app/assets/stylesheets/application.scss:42
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__476085177442828923_70187951048700'
 app/controllers/sessions_controller.rb:6:in `new'
@@ -9690,9 +9690,9 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 159ms (Views: 148.9ms | ActiveRecord: 0.5ms)
 
 
-  
+
 ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -9755,5 +9755,3 @@ Processing by EventsController#show as HTML
   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:8
 Completed 200 OK in 5942ms (Views: 5926.9ms | ActiveRecord: 2.0ms)
-
-
