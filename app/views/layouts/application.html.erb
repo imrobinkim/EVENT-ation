@@ -13,8 +13,17 @@
     <% if current_user %>
         Welcome <%= link_to first_name(current_user.name), user_path(current_user) %>  <%= link_to "Logout", '/logout'%>
     <% else %>
-        <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+
+    <nav class="nav nav-pills nav-fill fixed-top">
+
+        <%= link_to 'Login', '/login', :class => 'nav-item nav-link active' %>
+         <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
+       </nav>
     <% end %>
   <%= yield %>
+  <script>$(".nav nav-pills nav-fill fixed-top").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).addClass("active");
+  });</script>
   </body>
 </html>
