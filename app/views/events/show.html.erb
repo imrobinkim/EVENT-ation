@@ -1,19 +1,21 @@
-<h2><%= @event.name%></h2>
+<div class="jumbotron">
 
-<li>
+<h2><%= @event.name%></h2>
+<li class="list-group-item">
   <%= @event.address %>
 </li>
-<li>
+<li class="list-group-item">
 <%= @event.datetime %>
 </li>
 
-<li>
+<li class="list-group-item">
 
 <%= @event.host.name %>
 </li>
-<li>
+<li class="list-group-item">
 
 <%= @event.interest.name %>
 </li>
 
 <%= link_to "Attend this Event" %>
+</div>

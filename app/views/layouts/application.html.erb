@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EventSwap</title>
+    <title>EVENT-ation</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    </head>
 
   <body>
     <% if current_user %>
@@ -16,14 +16,14 @@
 
     <nav class="nav nav-pills nav-fill fixed-top">
 
-        <%= link_to 'Login', '/login', :class => 'nav-item nav-link active' %>
+        <%= link_to 'Login', '/login', :class => 'nav-item nav-link' %>
          <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
        </nav>
     <% end %>
   <%= yield %>
-  <script>$(".nav nav-pills nav-fill fixed-top").on("click", function(){
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-  });</script>
+
+  <div id="sky">
+    <div id="clouds"></div>
+  </div>
   </body>
 </html>

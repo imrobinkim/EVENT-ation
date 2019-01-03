@@ -1,9 +1,11 @@
 <h2>User Info</h2>
 
+<ul>
 
-First Name: <%= first_name(@user.name) %><br>
-Last Name: <%= last_name(@user.name) %>
-Username: <%= @user.username%> <br>
-Email: <%= @user.email%> <br>
-Age: <%= @user.age%><br>
-Events attended: <%= events_attending(@user)%>
+<li>First Name: <%= first_name(@user.name) %></li>
+<li>Last Name: <%= last_name(@user.name) %></li>
+<li>Username: <%= @user.username%> </li>
+<li>Email: <%= @user.email%> </li>
+<li>Age: <%= @user.age%></li>
+<li>Events attended: <%= events_attending(@user)%></li>
+</ul>

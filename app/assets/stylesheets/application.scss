@@ -10,5 +10,47 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require rails_bootstrap_forms
  */
 @import "_bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+.nav {
+  min-height: 38px;
+  background-color: #cdd0d6;
+}
+
+.jumbotron {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+body {
+  background-image: url(https://wallpapercave.com/wp/y5sdZdI.jpg);
+}
+
+.list-group-item {
+    background: rgba(204, 204, 204, 0);
+    display: inline-block;
+}
+#sky {
+	overflow: hidden;
+}
+#clouds {
+	width: 200%;
+	height: 400px;
+  opacity: 0.6;
+	background-image: url('https://www.script-tutorials.com/wp-content/uploads/2011/11/fimg.jpg');
+	background-size: cover;
+	-webkit-animation: movingclouds 25s linear infinite;
+	-moz-animation: movingclouds 25s linear infinite;
+	-o-animation: movingclouds 25s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-left: 0%;}
+	100% {margin-left: -100%;}
+}
+
+ul {
+    list-style-image: url(images/arrow.png);
+    list-style-position: inside;
+}
+p, h1, label{font-family: 'Special Elite', cursive;}

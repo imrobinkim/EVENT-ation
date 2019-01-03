@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    help:
+      user:
+        name_html: "<strong>Please include first<strong> and </strong>last name</strong>"
+        password_html: "<strong>Must be at least 6 characters long</strong>"
