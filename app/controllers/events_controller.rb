@@ -14,12 +14,24 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    if @event.valid?
-      @event.save
-      flash[:success] = "Event created!"
+    if @event.save
+      @event.host.add_points
+      flash[:success] = "Event created! You now have #{@event.host.points} points!"
       redirect_to @event
     else
       render :new
+    end
+  end
+
+  def update
+
+  end
+
+  def add_guest_to_event
+    @event = Event.find(params[:event_id])
+    if @event.add_guest_to_event(current_user)
+      flash[:notice] = "Can't wait to see you there!"
+      redirect_to current_user
     end
   end
 

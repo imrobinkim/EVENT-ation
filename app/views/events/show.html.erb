@@ -3,9 +3,11 @@
 <ul>
   <li><%= @event.address %></li>
   <li><%= @event.datetime %></li>
-  <li><%= @event.points %></li>
+  <li>Need <%= @event.points %> points to attend</li>
   <li><%= @event.host.name %></li>
   <li><%= @event.interest.name %></li>
 </ul>
 
-<%= link_to "Attend this Event" %>
+<%= form_tag add_guest_path(@event.id), method: :patch do %>
+  <%= submit_tag "Attend this Event" %>
+<% end %>

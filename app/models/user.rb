@@ -12,14 +12,20 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :age, presence: true
   validates :password, length: {minimum: 6}
-  validate :enough_points?
+  validate :user_has_enough_points
 
-  def enough_points?
-    if self.points > @event.points
-      true
-    else
-      false
+  def user_has_enough_points
+    if self.points < 100
+      errors.add("You don't have enough points!")
     end
   end
 
+  def add_points
+    self.update_attribute(:points, 100)
+  end
+
+  def events_user_is_attending
+    eventsguests = EventsGuest.all.select {|x| x.guest_id == self.id }
+    eventsguests.collect {|x| x.event }
+  end
 end

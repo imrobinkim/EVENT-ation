@@ -13,4 +13,9 @@ class Event < ApplicationRecord
       errors.add(:date, "of event can't be in the past")
     end
   end
+
+  def add_guest_to_event(guest_obj)
+    self.guests << guest_obj
+  end
+
 end
