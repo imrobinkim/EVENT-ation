@@ -23,11 +23,19 @@ class User < ApplicationRecord
   end
 
   def subtract_points
-    self.update_attribute(:points, (self.points - 100))
+      self.update_attribute(:points, (self.points - 100))
   end
 
   def events_user_is_attending
     eventsguests = EventsGuest.all.select {|x| x.guest_id == self.id }
     eventsguests.collect {|x| x.event }
+  end
+
+  def already_attending(event_obj)
+    if self.events_user_is_attending.include?(event_obj)
+      true
+    else
+      false
+    end
   end
 end

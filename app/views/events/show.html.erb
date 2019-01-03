@@ -13,12 +13,17 @@
 
   <li>Date & Time: <%= @event.datetime %></li>
 
-  <% if !(@event.host == current_user) %>
+  <% if !(@event.host == current_user) && !(current_user.already_attending(@event)) %>
     <li>Need 100 points to attend!</li>
+  <% end %>
+
+  <% if current_user.already_attending(@event)%>
+    <li>You're attending this event!</li>
   <% end %>
 </ul>
 
-<% if !(@event.host == current_user) %>
+
+<% if !(@event.host == current_user) && !(current_user.already_attending(@event))%>
   <%= form_tag add_guest_path(@event.id), method: :patch do %>
     <%= submit_tag "Attend this Event" %>
   <% end %>
@@ -26,5 +31,5 @@
 
 <% if @event.host == current_user %>
   <%= link_to "Edit This Event", edit_event_path(@event) %> |
+  <%= link_to "Homepage", current_user %>
 <% end %>
-<%= link_to "All Events", events_path %>

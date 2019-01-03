@@ -19,5 +19,4 @@ class Event < ApplicationRecord
       self.guests << guest_obj
     end
   end
-
 end
