@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :events, foreign_key: 'host_id'
   has_many :interests, through: :events
   has_many :guests, class_name: 'EventsGuest', foreign_key: 'guest_id'
+
   has_secure_password
 
   validates :username, presence: true, uniqueness: true
@@ -11,4 +12,14 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :age, presence: true
   validates :password, length: {minimum: 6}
+  validate :enough_points?
+
+  def enough_points?
+    if self.points > @event.points
+      true
+    else
+      false
+    end
+  end
+
 end
