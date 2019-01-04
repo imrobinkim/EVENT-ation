@@ -11,11 +11,16 @@
 
   <body>
     <% if current_user %>
-        Welcome <%= first_name(current_user.name) %>  |
-        <%= link_to "User Homepage", current_user %>  |
-        <%= link_to "Create New Event", new_event_path %>  |
-        <%= link_to "All Events", events_path %>  |
-        <%= link_to "Logout", '/logout'%>
+    <nav class="nav nav-pills nav-fill fixed-top">
+        <div class="nav-item nav-link">
+
+        Welcome <%= first_name(current_user.name)%>
+      </div>
+        <%= link_to "User Homepage", current_user, :class => 'nav-item nav-link' %>
+        <%= link_to "Create New Event", new_event_path, :class => 'nav-item nav-link' %>
+        <%= link_to "All Events", events_path, :class => 'nav-item nav-link' %>
+        <%= link_to "Logout", '/logout', :class => 'nav-item nav-link'%>
+      </nav>
     <% else %>
 
     <nav class="nav nav-pills nav-fill fixed-top">
