@@ -1,13 +1,14 @@
 <%= bootstrap_form_for @event do |f| %>
   <%= f.text_field :name %>
 
-
   <%= f.text_field :address %>
-<%=f.collection_select :interest_id, Interest.all, :id, :name%>
+
+  <%=f.collection_select :interest_id, Interest.all, :id, :name%>
 
   <div class="field">
     <%= f.datetime_field :datetime %>
   </div>
+  
   <% if current_user %>
     <%= f.hidden_field :host_id, value: current_user.id %>
   <% end %>

@@ -1,0 +1,9 @@
+<div class="jumbotron">
+
+<h1>Interests</h1>
+
+<ul>
+  <% @interests.each do |interest| %>
+    <li><%= link_to interest.name, interest %></li>
+  <% end %>
+</ul>

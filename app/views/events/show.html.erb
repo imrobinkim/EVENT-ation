@@ -12,6 +12,8 @@
 
 <div class="jumbotron">
 
+<h2><%= @event.name %></h2>
+
 <ul>
   <% if @event.host == current_user %>
     <li class="list-group-item">Host: You're hosting!</li>
@@ -34,6 +36,16 @@
   <% end %>
 </ul>
 
+<% if @event.host == current_user %>
+  <h4>Guests:</h4>
+  <ul>
+    <% @event.guests.each do |guest| %>
+      <li>
+        <%= guest.name %> | <%= link_to "email" %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 
 <% if !(@event.host == current_user) && !(current_user.already_attending(@event))%>
   <%= form_tag add_guest_path(@event.id), method: :patch do %>

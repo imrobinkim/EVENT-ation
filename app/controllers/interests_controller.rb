@@ -8,11 +8,4 @@ class InterestsController < ApplicationController
     @interest = Interest.find(params[:id])
   end
 
-  def new
-
-  end
-
-  def create
-
-  end
 end
