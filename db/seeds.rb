@@ -16,6 +16,7 @@
 User.destroy_all
 Interest.destroy_all
 Event.destroy_all
+EventsGuest.destroy_all
 
 rkim = User.create(username: "rkim", name: "Robin Kim", email: "rkim@gmail.com", password: "blah", points: 0, age: 24)
 jbenjamin = User.create(username: "jbenjamin", name: "Jonnel Benjamin", email: "jbenj@gmail.com", password: "hey", points: 0, age: 23)
