@@ -18,6 +18,10 @@
 
 <div class="col-md-4">
 
+<%= form_tag edit_user_path(@user), method: :get do %>
+  <%= submit_tag "Edit Profile" %>
+<% end %>
+
 <h2>Events you are hosting</h2>
 <div class="outside-hosting">
 
