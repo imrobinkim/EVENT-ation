@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
     if current_user
       redirect_to events_path
@@ -24,4 +25,5 @@ class SessionsController < ApplicationController
     cookies.delete("current_user")
     redirect_to login_path
   end
+  
 end

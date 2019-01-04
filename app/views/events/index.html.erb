@@ -1,6 +1,9 @@
 <div class="jumbotron">
 
 <h1>All Events!</h1>
+
+<%= link_to "Sort By Interest Category", interests_path %>
+
 <ul>
   <% @events.each do |event|%>
     <li><%= link_to event.name, event%></li>
