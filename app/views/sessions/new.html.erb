@@ -1,22 +1,21 @@
-
-  <div class="jumbotron">
-  <h1 class="display-4">EVENT-ation!</h1>
-  <p class="lead">Thrive in community by attending events and gaining prime networking connections.</p>
-  <hr class="my-4">
-  <p>Don't forget to have fun!</p>
-  <h1>Login</h1>
-  <% if flash.notice%>
-  <h3><%= flash.notice %></h3>
-  <% end %>
-  <%= bootstrap_form_for "/login" do %>
-  <%= label :username, "Username" %>
-  <%= text_field_tag :username %>
-  <br>
-  <br>
-  <%= label :password, "Password" %>
-  <%= password_field_tag :password %>
-  <br>
-  <br>
-  <%= submit_tag "Login", :class => "btn btn-primary btn-lg"%>
-  <% end %>
+<div class="jumbotron">
+ <h1 class="display-4">EVENT-ation!</h1>
+ <p class="lead">Thrive in community by attending events and gaining prime networking connections.</p>
+ <hr class="my-4">
+ <p>Don't forget to have fun!</p>
+ <h1>Login</h1>
+ <% if flash.notice%>
+ <h3><%= flash.notice %></h3>
+ <% end %>
+ <%= bootstrap_form_for "/login" do %>
+ <%= label :username, "Username" %>
+ <%= text_field_tag :username %>
+ <br>
+ <br>
+ <%= label :password, "Password" %>
+ <%= password_field_tag :password %>
+ <br>
+ <br>
+ <%= submit_tag "Login", :class => "btn btn-primary btn-lg"%>
+ <% end %>
 </div>

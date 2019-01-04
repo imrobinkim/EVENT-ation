@@ -4,9 +4,15 @@
 
 <%= link_to "Sort By Interest Category", interests_path %>
 
-<ul>
+<div class="outside">
+
+
   <% @events.each do |event|%>
-    <li><%= link_to event.name, event%></li>
+  <ul>
+     <li><%= link_to event.name, event%></li>
+  </ul>
   <% end %>
-</ul>
+</div>
+</div>
+
 </div>

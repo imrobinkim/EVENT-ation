@@ -41,7 +41,7 @@ body {
 #clouds {
 	width: 200%;
 	height: 400px;
-  opacity: 0.3;
+  opacity: 0.4;
 	background-image: url('https://www.script-tutorials.com/wp-content/uploads/2011/11/fimg.jpg');
 	background-size: cover;
 	-webkit-animation: movingclouds 25s linear infinite;
@@ -60,4 +60,26 @@ p, h1, h2,a, div, input, label{
 }
 p {
   text-shadow: black;
+}
+
+
+
+.outside {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.outside-attending {
+  max-height: 220px;
+  overflow-y: scroll;
+}
+
+.outside-hosting {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.outside-interests {
+  max-height: 240px;
+  overflow-y: scroll;
 }
