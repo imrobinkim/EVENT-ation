@@ -2,6 +2,7 @@
 
 <h2>New Event</h2>
 <%= bootstrap_form_for @event do |f| %>
+<% end %>
 
 <%= render partial: "shared/error_list", locals: {new_object: @event} %>
 <%= render partial: "event_form", locals: { submit_text: 'Create Event'} %>

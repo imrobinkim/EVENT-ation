@@ -9755,3 +9755,122 @@ Processing by EventsController#show as HTML
   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rkim"], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:8
 Completed 200 OK in 5942ms (Views: 5926.9ms | ActiveRecord: 2.0ms)
+Started GET "/events/new" for 127.0.0.1 at 2019-01-03 18:53:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/robinkim/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/robinkim/Development/2-Module/FINALPROJECT/EVENT-ation/app/views/events/new.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/robinkim/Development/2-Module/FINALPROJECT/EVENT-ation/app/views/events/new.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/events/new.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/events/new.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/events/new" for 127.0.0.1 at 2019-01-03 18:54:46 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.4ms)
+  [1m[36mInterest Load (0.1ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/_event_form.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jbenjamin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered events/_event_form.html.erb (38.5ms)
+  Rendered events/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 4353ms (Views: 4349.0ms | ActiveRecord: 1.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/arrow.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/events" for 127.0.0.1 at 2019-01-03 18:55:44 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:5
+  Rendered events/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jbenjamin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-03 18:55:46 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (0.6ms)
+  [1m[36mInterest Load (0.2ms)[0m  [1m[34mSELECT "interests".* FROM "interests"[0m
+  ↳ app/views/events/_event_form.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jbenjamin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered events/_event_form.html.erb (7.4ms)
+  Rendered events/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-01-03 18:55:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."host_id" = ?[0m  [["host_id", 2]]
+  ↳ app/controllers/application_controller.rb:28
+  [1m[36mEventsGuest Load (0.2ms)[0m  [1m[34mSELECT "events_guests".* FROM "events_guests"[0m
+  ↳ app/models/user.rb:30
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  Rendered users/show.html.erb within layouts/application (29.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jbenjamin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 2.3ms)
+
+
