@@ -15,15 +15,17 @@ class User < ApplicationRecord
   # validate :user_has_enough_points?
 
   def has_enough_points?
-    self.points >= 0
+    self.points >= 100
   end
 
   def add_points
-    self.update_attribute(:points, (self.points + 100))
+    total_points = self.points + 100
+    self.update_attribute(:points, total_points)
   end
 
   def subtract_points
-      self.update_attribute(:points, (self.points - 100))
+    total_points = self.points - 100
+    self.update_attribute(:points, total_points)
   end
 
   def events_user_is_attending
