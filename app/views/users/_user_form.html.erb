@@ -3,7 +3,7 @@
 
 <%= f.text_field :username %>
 <%= f.password_field :password%>
-<%= f.text_field :name %>
+<%= f.text_field :name, help: "Please include first and last name" %>
 <%= f.email_field :email %>
 <%= f.number_field :age %>
 <%= f.submit submit_text, :class => "btn btn-primary btn-lg" %>

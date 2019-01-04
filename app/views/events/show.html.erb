@@ -1,7 +1,13 @@
 <nav class="nav nav-pills nav-fill fixed-top">
 
-    <%= link_to 'Login', '/login', :class => 'nav-item nav-link' %>
-     <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
+  <div class="nav-item nav-link">
+
+  Welcome <%= first_name(current_user.name)%>
+  </div>
+  <%= link_to "User Homepage", current_user, :class => 'nav-item nav-link' %>
+  <%= link_to "Create New Event", new_event_path, :class => 'nav-item nav-link' %>
+  <%= link_to "All Events", events_path, :class => 'nav-item nav-link' %>
+  <%= link_to "Logout", '/logout', :class => 'nav-item nav-link'%>
    </nav>
 
 <div class="jumbotron">

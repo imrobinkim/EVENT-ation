@@ -20,7 +20,9 @@
 }
 
 .jumbotron {
-  background: rgba(204, 204, 204, 0.5);
+  background: rgba(204, 204, 204, 0.7);
+  margin-bottom: 150px;
+  top: 1000px;
 }
 
 body {
@@ -33,24 +35,29 @@ body {
 }
 #sky {
 	overflow: hidden;
+  z-index: -1;
+  position: relative;
 }
 #clouds {
 	width: 200%;
 	height: 400px;
-  opacity: 0.6;
+  opacity: 0.3;
 	background-image: url('https://www.script-tutorials.com/wp-content/uploads/2011/11/fimg.jpg');
 	background-size: cover;
 	-webkit-animation: movingclouds 25s linear infinite;
 	-moz-animation: movingclouds 25s linear infinite;
 	-o-animation: movingclouds 25s linear infinite;
+  position: relative;
+  z-index: -1;
 }
 @keyframes movingclouds {
 	0% {margin-left: 0%;}
 	100% {margin-left: -100%;}
 }
 
-ul {
-    list-style-image: url(images/arrow.png);
-    list-style-position: inside;
+p, h1, h2,a, div, input, label{
+  font-family: 'Special Elite', cursive;
 }
-p, h1, h2,a, div, input, label{font-family: 'Special Elite', cursive;}
+p {
+  text-shadow: black;
+}
