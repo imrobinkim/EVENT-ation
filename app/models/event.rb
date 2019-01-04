@@ -20,4 +20,12 @@ class Event < ApplicationRecord
       self.guests << guest_obj
     end
   end
+
+  def date
+    "#{self.datetime.strftime("%B")} #{self.datetime.strftime("%d")}, #{self.datetime.strftime("%Y")}"
+  end
+
+  def time
+    self.datetime.strftime("%I:%M%p")
+  end
 end

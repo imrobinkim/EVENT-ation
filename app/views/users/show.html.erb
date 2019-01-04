@@ -13,14 +13,13 @@
 <li>Username: <%= @user.username%> </li>
 <li>Email: <%= @user.email%> </li>
 <li>Age: <%= @user.age%></li>
-<li>Events attended: <%= events_attending(@user)%></li>
+<%= form_tag edit_user_path(@user), method: :get do %>
+<%= submit_tag "Edit Profile" %>
+<% end %>
 </div>
 
 <div class="col-md-4">
 
-<%= form_tag edit_user_path(@user), method: :get do %>
-  <%= submit_tag "Edit Profile" %>
-<% end %>
 
 <h2>Events you are hosting</h2>
 <div class="outside-hosting">

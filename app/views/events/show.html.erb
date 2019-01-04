@@ -13,7 +13,9 @@
 
   <li class="list-group-item">Address: <%= @event.address %></li>
 
-  <li class="list-group-item">Date & Time: <%= @event.datetime %></li>
+  <li class="list-group-item">Date: <%= @event.date %></li>
+
+  <li class="list-group-item">Time: <%= @event.time %></li>
 
   <% if !(@event.host == current_user) && !(current_user.already_attending(@event)) %>
     <li class="list-group-item">Need 100 points to attend!</li>
