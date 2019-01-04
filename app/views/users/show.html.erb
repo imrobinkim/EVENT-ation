@@ -13,6 +13,7 @@
 <li>Username: <%= @user.username%> </li>
 <li>Email: <%= @user.email%> </li>
 <li>Age: <%= @user.age%></li>
+
 <%= form_tag edit_user_path(@user), method: :get do %>
 <%= submit_tag "Edit Profile" %>
 <% end %>
