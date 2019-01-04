@@ -1,12 +1,19 @@
 <div class="jumbotron">
 
 <h1>All Events!</h1>
+<%= form_tag interests_path, method: :get do %>
+  <%= submit_tag "Sort by Interest Category" %>
+<% end %>
 
-<%= link_to "Sort By Interest Category", interests_path %>
+<div class="outside">
 
-<ul>
+
   <% @events.each do |event|%>
-    <li><%= link_to event.name, event%></li>
+  <ul>
+     <li><%= link_to event.name, event%></li>
+  </ul>
   <% end %>
-</ul>
+</div>
+</div>
+
 </div>

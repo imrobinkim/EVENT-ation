@@ -1,9 +1,11 @@
 <div class="jumbotron">
 
 <h2><%= @interest.name %></h2>
+<div class="outside-interests">
 
 <ul>
   <% @interest.events.each do |event| %>
     <li><%= link_to event.name, event %></li>
   <% end %>
 </ul>
+</div>

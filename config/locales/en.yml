@@ -34,5 +34,5 @@ en:
   activerecord:
     help:
       user:
-        
+        name_html: "Please include first and last name"
         password_html: "<strong>Must be at least 6 characters long</strong>"

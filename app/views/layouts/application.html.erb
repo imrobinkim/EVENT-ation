@@ -28,6 +28,9 @@
         <%= link_to 'Login', '/login', :class => 'nav-item nav-link' %>
          <%= link_to 'Signup', '/signup', :class => 'nav-item nav-link' %>
        </nav>
+       <div id="sky">
+         <div id="clouds"></div>
+       </div>
     <% end %>
 
     <% flash.each do |name, msg| %>
@@ -36,8 +39,5 @@
 
   <%= yield %>
 
-  <div id="sky">
-    <div id="clouds"></div>
-  </div>
   </body>
 </html>
